@@ -8,7 +8,7 @@ This is a component to provide a "launcher" type app that is similar to the one 
 
 The following is example screen showing the 3 pieces of this "launcher" component. The two left-hand images show the component in a normal Community template and the right-hand image is same accessed from mobile app.
 
-![alt text](https://raw.githubusercontent.com/thedges/PSPageLauncher/master/PSPageLauncherSnapshot1.png "Sample Image")
+![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/PSEinsteinDiscoveryCard.jpg "Sample Image")
 
 This component is driven by information stored in 2 objects. Here is description of the objects:
 
