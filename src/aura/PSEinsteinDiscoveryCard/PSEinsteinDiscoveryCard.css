@@ -1,0 +1,70 @@
+.THIS .slds-text-title--caps{
+    font-size: .75rem !important;
+    line-height: 1.25;
+    color: rgb(84, 105, 141);
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+}
+
+.THIS .score-green{
+   color: #29a329 !important;
+}
+
+.THIS .score-red{
+   color: #c23934 !important;
+}
+
+.THIS .score-yellow{
+  color: #cccc00 !important;
+}
+
+.THIS .score-grey{
+  color: #f4f6f9 !important; 
+}
+
+
+.THIS .slds-card{
+    background:white !important;
+    border:none !important;
+}
+.THIS .slds-card__header .slds-card__footer .slds-card__body--inner{
+    padding:0px !important;        
+}
+.THIS html body.sfdcBody {
+    padding: 0px;
+}
+
+.THIS div#container {
+    background:white !important;
+}
+
+.THIS .slds-text-color--error {
+    color: rgb(85, 194, 125) !important;
+}
+.THIS .ac-sdd-text-color--green {
+    color: #c23934 !important;
+}
+.THIS .ac-sdd-background-color--grey {
+    background-color: #f4f6f9;
+}
+.THIS .ac-sdd-left-col {
+    width: 25% !important;
+}
+.THIS .ac-sdd-right-col {
+    width: 75% !important;
+    white-space: normal !important;
+}
+.THIS #score_container.slds-list--horizontal {
+    width: 90% !important;
+}
+.THIS #score.ac-sdd-left-col {
+    width: 50% !important;
+}
+.THIS #score_label.ac-sdd-right-col {
+    width: 35% !important;
+}
+.THIS .slds-p-top--medium {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    padding-top: 0px !important;
+}

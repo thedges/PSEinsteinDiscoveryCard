@@ -1,0 +1,601 @@
+.THIS.runtime_sales_insightsInsightsContainer {
+    border: none;
+    padding-bottom: 2px;
+}
+
+.THIS.runtime_sales_insightsInsightsContainer.SFX_HOME .slds-card__header {
+    padding: 0;
+}
+
+.THIS.runtime_sales_insightsInsightsContainer h2.einstein-logo-hdr {
+    display: inline;
+    width: 100%;
+}
+
+.THIS .runtime_sales_insightsEinsteinHeader.einstein-header-wrapper {
+    background-image: url(/resource/PSEinsteinImages/einstein_header_background.svg);
+    background-repeat: repeat-x;
+    background-size: auto 81px;
+    border-radius: .25rem .25rem 0 0;
+    border-color: rgb(221, 219, 218);
+    height: 81px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    position: relative;
+}
+
+.THIS .runtime_sales_insightsEinsteinHeader .einstein-label {
+    padding-left: .75rem;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(22, 50, 92);
+}
+
+.THIS .runtime_sales_insightsEinsteinHeader .uiImage {
+    padding: .95rem .75rem 0 0;
+    margin-left: auto;
+}
+
+.THIS .predictive-header {
+    font-size: 14px;
+}
+
+.THIS .wrapper {
+position:relative;
+    /*
+    background:rgb(244, 246, 249);
+    */
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:4px;
+    margin-right:4px;
+}
+
+.THIS .einstein-indicator {
+    height: 1rem;
+    width: 1rem;
+}
+
+.THIS .wrapper .title {
+    color: rgb(22, 50, 92);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom:10px;
+} 
+.THIS .wrapper .title > img{
+    width: 50px;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+.THIS .wrapper .insight{
+    height:auto;
+    border-radius:4px;
+    border:1px solid #d8dde6;
+    margin-bottom:10px;
+    background:white;
+    /*width:591px;*/
+    background-color:white;
+    transition:backgroundColor 1.0s ease-in-out,opacity 0.4s,top 0.4s,max-height 0.4s;
+    opacity:1;
+    position:absolute;
+    overflow:hidden;
+}
+.THIS .wrapper .placeholder{
+    height:77px;
+    width:100%;
+    display:none;
+}
+.THIS .wrapper .placeholder.show{
+display:block;
+}
+
+.THIS .wrapper > #insight1{
+top:49px;
+    z-index:1003;
+}
+.THIS .wrapper > #insight2{
+top:49px;
+    z-index:1002
+}
+.THIS .wrapper > #insight3{
+top:49px;
+    z-index:1001;
+}
+.THIS .wrapper > #insight4{
+top:49px;
+    z-index:1000;
+}
+.THIS .wrapper > #insight5{
+top:49px;
+    z-index:999;
+}
+.THIS .wrapper > #insight6{
+top:49px;
+    z-index:998;
+}
+
+.THIS .wrapper > .insight.follow1{
+    top:126px !important;
+}
+.THIS .wrapper > .insight.follow2{
+    top:203px !important;
+}
+.THIS .wrapper > .insight.follow3{
+    top:280px !important;
+}
+.THIS .wrapper > .insight.follow4{
+    top:357px !important;
+}
+.THIS .wrapper > .insight.follow5{
+    top:434px !important;
+}
+.THIS .wrapper > #insight2.drop{
+top:126px !important;
+}
+.THIS .wrapper > #insight3.drop{
+    top:203px !important;
+}
+.THIS .wrapper > #insight4.drop{
+    top:280px !important;
+}
+.THIS .wrapper > #insight5.drop{
+    top:357px !important;
+}
+.THIS .wrapper > #insight6.drop{
+    top:434px !important;
+}
+.THIS .wrapper .insight.regular{
+position:relative;
+    top:0px !important;
+    transition:backgroundColor 1.0s ease-in-out,opacity 0.4s,max-height 0.4s !important;
+}
+.THIS .wrapper .insight .insight-title{
+    line-height:51px;
+    color:#54698D;
+font-size:15px;
+}
+.THIS .wrapper .insight .insight-subtitle{
+color:rgb(84, 105, 141);
+    margin-top:-15px;
+    margin-bottom:10px;
+    font-size:12px;
+}
+.THIS .wrapper .insight > .content{
+max-height:0px;
+    overflow:hidden;
+    transition:max-height 0.4s;
+    width:100%;
+}
+.THIS .wrapper .insight > .content.expand{
+max-height:400px;
+}
+.THIS .wrapper .insight > .content > .content-button{
+height:48px;
+    width:100%;
+background:#0070D2;
+    color:white;
+    font-size:14px;
+    text-align:center;
+    line-height:48px;
+    cursor:pointer;
+}
+.THIS .wrapper .insight.fade{
+opacity:0;
+}
+.THIS .wrapper .insight.hide{
+display:none;
+}
+
+.THIS .wrapper .insight > img:first-of-type{
+    display:inline-block;
+    vertical-align:middle;
+    height:18px;
+    width:18px;
+    margin-right:5px;
+    margin-top:-2px;
+    margin-left:10px;
+    
+}
+.THIS .wrapper .insight > img.leadScoreIndicator{
+margin-top: -20px;
+    width: 25px;
+    height: 25px;
+}
+
+.THIS .wrapper .insight > img:nth-of-type(2){
+display: none;
+    vertical-align: middle;
+    height: 18px;
+    width: 18px;
+    margin-left: -23px;
+    margin-top: -1px;
+    margin-right: 5px;
+}
+.THIS .wrapper .insight > img.show{
+    display:inline-block;
+}
+.THIS .wrapper .insight > img.rotate{
+transform:rotate(-90deg);
+    transition:transform 1.0s,opacity 0.4s;
+    opacity:1;
+}
+
+.THIS .wrapper .insight > img.rotateNeutral{
+transform:rotate(-45deg);
+    transition:transform 1.0s,opacity 0.4s;
+    opacity:1;
+}
+.THIS .wrapper .insight > img.disappear{
+    opacity:0;
+}
+.THIS .wrapper .insight > .why{
+float:right;
+    height:24px;
+    width:36px;
+    background-image:url(https://www.dropbox.com/s/e6df1plfyk4vqms/buttons.png?raw=1);
+    margin-top:20px;
+    cursor:pointer;
+    margin-right:10px;
+}
+.THIS .wrapper .insight.down{
+}
+.THIS .wrapper .insight.up{
+}
+.THIS .wrapper .hover{
+    display: none;
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+    border-radius: .1rem;
+    background: white;
+    padding: 10px;
+    position: absolute;
+    top: 128px;
+    right: -1px;
+    z-index: 1000;
+}
+.THIS .wrapper .hover.show{
+    display:block;
+}
+.THIS .wrapper .hover > .hover-box{
+    background:#FAFBFD;
+    border-radius:.1rem;
+    border:1px solid #E7E8EC;
+    padding:5px;
+    font-size:.9em;
+}
+.THIS .wrapper .hover > .last-activity{
+    font-size:.9em;
+    margin-top:10px;
+}
+.THIS .wrapper .hover > .hover-box > table > tr > td > .activity-date{
+    float:right;
+    color:rgb(84, 105, 141);
+    margin-top:2px;
+}
+.THIS .wrapper .hover > .hover-box > table > tr > td > img{
+height:24px;
+    width:24px;
+    border-radius:100%;
+    margin-right:5px;
+}
+.THIS .wrapper .hover > .hover-box > .hover-date{
+color:rgb(84, 105, 141);
+    font-style:italic;
+    font-size:.8em;
+}
+.THIS .wrapper .hover > .hover-box > table > tr > td > .from{
+color: rgb(84, 105, 141);
+    font-size: .7rem;
+    line-height: 22px;
+}
+.THIS .wrapper .hover > .hover-arrow{
+height: 20px;
+    width: 20px;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: 10px solid white;
+    border-top: 10px solid white;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    box-shadow: -1px -1px 1px 0px rgba(0,0,0,0.5);
+}
+.THIS.dock{
+height:480px;
+    width:480px;
+    position:fixed;
+    background:white;
+    bottom:-480px;
+    right:20px;
+    z-index:10000;
+    border:1px solid #D8DDE6;
+    transition:bottom 0.3s ease-in-out;
+    background-image:url(/resource/dock4);
+    background-size: 480px;
+    background-position:top;
+    background-repeat:no-repeat;
+    border-top-right-radius:.3em;
+    border-top-left-radius:.3em;
+}
+.THIS.dock.bounce{
+    bottom:0px;
+}
+.THIS.dock.active{
+    bottom:-1px;
+    transition:bottom 0.1s ease-in-out;
+}
+.THIS.dock > .dockbutton{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    height:50px;
+    width:100px;
+    cursor:pointer;
+}
+.THIS .wrapper > .hover > .buttons{
+    width:400px;
+    height:50px;
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+.THIS .wrapper > .hover > .buttons > .hover-accept{
+width: 200px;
+    background: #0070D2;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    display:inline-block;
+    cursor:pointer;
+}
+.THIS .wrapper > .hover > .buttons > .hover-reject{
+width: 200px;
+    display:inline-block;
+    background: #E0E5EE;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor:pointer;
+}
+.THIS .wrapper > .loader{
+width:100%;
+    height:176px;
+    background-color:rgba(255,255,255);
+    background-image:url(https://www.dropbox.com/s/nd13vhdb66blve6/loader-blue.gif?raw=1);
+    background-position:center;
+    background-repeat:no-repeat;
+    opacity:1;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:200000;
+    display:none;
+    background-size:50px;
+}
+
+.THIS .wrapper > .loader.show{
+    display:block;
+}
+.THIS .wrapper > .insight > .content > .content-body{
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom:8px;
+    width:100%;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-top{
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-top > .content-body-top-question{
+    font-size:14px;
+    font-weight:bold;
+    color:#54698D;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-top > .content-body-top-answer{
+    margin-top: 10px;
+    color: #16325C;
+    font-size: 13px;
+    margin-right:20px;
+}
+    
+.THIS .wrapper > .insight > .content > .content-body > .content-body-top > .content-body-top-question > img{
+   height: 13px;
+    width: 13px;
+    margin-top: -3px;
+    margin-right: 7px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-header{
+    margin-left:25px;
+    margin-top:15px;
+    font-size:12px;
+    color:#54698D;
+    overflow:hidden;
+    margin-right:20px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-header > .content-body-header-left{
+float:left;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-header > .content-body-header-left > img{
+vertical-align:middle;
+    margin-top:-2px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-header > .content-body-header-right > img{
+vertical-align:middle;
+    margin-top:-2px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-header > .content-body-header-right{
+float:right;
+}
+.THIS .wrapper > .insight > .content > .content-body > .visible > .content-body-squiggle{
+	width:100%;
+    height:1.31px;
+    /*
+    background-image:url(https://www.dropbox.com/s/bo2w91x9xusxdnq/squiggle.png?raw=1);
+    */
+    background-color:#D8DDE6;
+    margin-top:15px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .visible > .relevant-activity{
+    font-size:12px;
+    color:#16325C;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom{
+	/*background:#F9F8FC;
+    border:1px solid #D8DDE6;*/
+    border-radius:3px;
+    width:100%;
+    margin-bottom:10px;
+}
+
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom a{
+    margin-left: .5em;
+}
+.THIS .wrapper .relevant-activity span{
+    padding-left:9px;
+}
+
+
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom > .visible > .content-body-bottom-subject{
+    color:#0070D2;
+    font-size:12p;
+    display:inline-block;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom > .visible > .content-body-bottom-subject > img{
+	vertical-align:bottom;
+    display:inline-block;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom > .visible > .content-body-bottom-email{
+    margin-left: 30px;
+    color:#1b436f;
+    font-size:12px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom > .visible > .content-body-bottom-email > .from{
+	color:#54698D;
+}
+
+
+
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2{
+	/*background:#F9F8FC;
+    border:1px solid #D8DDE6;*/
+    border-radius:3px;
+    width:100%;
+    margin-bottom:10px;
+}
+
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2 a{
+    margin-left:7px;
+}
+
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2 > .visible > .content-body-bottom-subject{
+    color:#0070D2;
+    font-size:12p;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2 > .visible > .content-body-bottom-subject > img{
+	vertical-align:bottom;
+    margin-right:5px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2 > .visible > .content-body-bottom-email{
+    margin-top: .5em;
+    margin-left:31px;
+    color:#1b436f;
+    font-size:12px;
+}
+.THIS .wrapper > .insight > .content > .content-body > .content-body-bottom2 > .visible > .content-body-bottom-email > .from{
+	color:#54698D;
+}
+
+.THIS .wrapper .icon {
+	float:left;
+    margin-top:3px;
+    display:inline-block;
+}
+
+.THIS .wrapper > .insight > .title-wrapper{
+    display:inline-block;
+    cursor:pointer;
+ 	margin-left:5px;
+    vertical-align:middle;
+}
+
+.THIS .wrapper > .title > .ellie{
+    width:18px;
+    float:right;
+    cursor:pointer;
+}
+
+.THIS .leadScoreIndicator {
+    margin-top: -20px;
+    width: 25px;
+    height: 25px;
+}
+
+.THIS .wrapper .scoreDarkGreen {
+    color: rgb(2, 128, 72) !important;
+}
+
+.THIS .top-card{
+	text-align:center;
+    background-color:#f8f9fb;
+    width:100%;
+    min-height:100px;
+    padding-bottom:15px;
+    border-bottom:thin solid #d8dde5;
+}
+
+.THIS .top-card h1{
+    font-size:16px;
+    padding-bottom:3px;
+}
+
+.THIS .bottom-card{
+	padding-left:10px;
+    background-color:#ffffff;
+    width:100%;
+    min-height:150px;
+    padding-bottom:15px;
+}
+
+.THIS .bottom-card li{
+    padding-bottom:5px;
+}
+
+.THIS .bottom-card li img{
+    margin-top:-3px;
+    padding-right:4px;
+}
+
+.THIS .bottom-card h3{
+    padding-top:15px;
+	padding-bottom:8px;
+    font-size:14px;
+}
+.THIS .wrapper > .visible{
+	display:block;
+}
+.THIS .wrapper > .invisible{
+	display:none;
+}
+.THIS .wrapper .insight .red{
+	color:rgb(194, 57, 52);
+}
+.THIS .wrapper .insight .neut{
+	color:rgb(22, 50, 92);
+}
+.THIS .wrapper .insight .green{
+	color:rgb(2, 128, 72);
+}

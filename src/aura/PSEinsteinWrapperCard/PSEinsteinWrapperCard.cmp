@@ -1,0 +1,37 @@
+<aura:component extensible="true" abstract="true">
+    <aura:attribute name="cardLabel" type="String" default="Card Title"></aura:attribute>
+    <aura:attribute name="hasData" type="Boolean" default="true"></aura:attribute>
+    
+    <div class="slds-card insightsContainer runtime_sales_insightsInsightsContainer SFX_HOME">
+        <div class="slds-card__header slds-grid">
+            <h2 class="einstein-logo-hdr slds-text-heading_small">
+                <span class="einstein-logo">
+                    <div class="einstein-header-wrapper runtime_sales_insightsEinsteinHeader">
+                        <span class="einstein-label">{!v.cardLabel}</span>
+                        <span class="uiImage">
+                            <img class="einstein-header-icon" src="/resource/PSEinsteinImages/einstein_header_icon.svg"></img>
+                        </span>
+                    </div>
+                </span>
+            </h2>
+        </div>
+        
+        <div class="slds-card__body slds-card__body_inner">
+            <aura:if isTrue="{!v.hasData}">
+                <div class="insightsCardsContainer runtime_sales_insightsInsightsCards">
+                    <div class="insightsCardsContainer runtime_sales_insightsInsightsCards">
+                        {!v.body}
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <div class="einstein-message-container">
+                        <p class="einstein-message">
+                            Einstein's in the lab crunching numbers. Stay tuned for a breakthrough...
+                        </p>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+    
+</aura:component>
