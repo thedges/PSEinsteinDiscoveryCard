@@ -1,5 +1,5 @@
 <design:component >
-  <design:attribute name="cardLabel" label="Label at top of card" Description="Label at top of card"/>
+  <design:attribute name="cardLabel" label="Card title" Description="Label at top of card"/>
   <design:attribute name="outcomeLabel" label="Label for outcome score" Description="Label for outcome score"/> 
   <design:attribute name="outcomeField" label="API field name for outcome score" Description="API field name for outcome score"/> 
   <design:attribute name="outcomeColor" label="Color range definition for red,yellow,green" Description="Color range definition for red,yellow,green"/> 
