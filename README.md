@@ -6,6 +6,10 @@ The following is example screenshot of the component showing the Einstein Discov
 
 ![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/PSEinsteinDiscoveryCard.jpg "Sample Image")
 
+Pre-requisite
+
+* Setup the Einstein Discovery writeback as defined [here](https://help.salesforce.com/articleView?id=bi_edd_wb_intro.htm&type=0)
+
 This component has the following configuration properties:
 
 * <b>Card title</b> - the title string of the card to be displayed at top
