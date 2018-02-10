@@ -14,7 +14,8 @@ The following is example screenshot of the component showing the Einstein Discov
 
 If you are going to hand enter some dummy text values in the explanation or prescription fields, please follow this format in the rich text editor. Create entry like following on separate line 
 
-```+ 12.75 if you Close Case within 3 hours
+```
++ 12.75 if you Close Case within 3 hours
 - 7.949 if you change Offer Voucher to false
 ```
 
