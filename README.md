@@ -6,7 +6,11 @@ The following is example screenshot of the component showing the Einstein Discov
 
 ![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/PSEinsteinDiscoveryCard.jpg "Sample Image")
 
-This component has the following configuration properties:
+### Pre-requisite
+
+* Setup the Einstein Discovery writeback as defined [here](https://help.salesforce.com/articleView?id=bi_edd_wb_intro.htm&type=0)
+
+### This component has the following configuration properties:
 
 * <b>Card title</b> - the title string of the card to be displayed at top
 * <b>Label for outcome score</b> - the label string to display at right of outcome score
@@ -19,7 +23,7 @@ This component has the following configuration properties:
 * <b>Empty msg for section 2</b> - the message to show if this data is empty
 * <b>API field name for section 2</b> - the API field name of the object field to pull the Einstein Discovery analysis results. This field is rich text field that will store a value like "`- 52.7 units if you change Program Category to Crisis<br>- 33.66 units if you change Service to Intensive Residential<br>- 32.34 units if you change Service to Residential Rehab for Youth`"
 
-The fields to create on the object to drive this component are:
+### The fields to create on the object to drive this component are:
 
 * <b>Outcome Score</b> - a Number(16,2) field to store the outcome results
 * <b>Explanation Field</b> - a Rich Text Field to store the Einstein Analytics explanation results (for Section 1 above)
