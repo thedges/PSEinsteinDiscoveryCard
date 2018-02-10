@@ -71,12 +71,16 @@
                 
                 if (resp.data.section1Field != undefined)
                 {
-                  $('#section1').html(myUtil.populateTable(resp.data.section1Field));
+                  var fieldData = resp.data.section1Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
+                  $('#section1').html(myUtil.populateTable(fieldData));
+                  //$('#section1').html(myUtil.populateTable(resp.data.section1Field));
                 }
                 
                 if (resp.data.section2Field != undefined)
                 {
-                  $('#section2').html(myUtil.populateTable(resp.data.section2Field));
+                  var fieldData = resp.data.section2Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
+                  $('#section2').html(myUtil.populateTable(fieldData));
+                  //$('#section2').html(myUtil.populateTable(resp.data.section2Field));
                 }
 
             }
