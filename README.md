@@ -12,8 +12,12 @@ The following is example screenshot of the component showing the Einstein Discov
 
 ### Hand-coding fake Einstein Discovery results
 
-If you are going to hand enter some dummy text values in the explanation or prescription fields, please follow this format in the rich text editor:
-* Create entry like following on separate line "+ 12.75 if you Close Case within 3 hours" or "- 7.949 if you change Offer Voucher to false". Make sure to have a <space> between the + or 1 sign and the number.
+If you are going to hand enter some dummy text values in the explanation or prescription fields, please follow this format in the rich text editor. Create entry like following on separate line 
+
++ 12.75 if you Close Case within 3 hours
+- 7.949 if you change Offer Voucher to false
+
+Make sure to have a space between the '+' or '-' sign and the number.
 
 ### This component has the following configuration properties:
 
