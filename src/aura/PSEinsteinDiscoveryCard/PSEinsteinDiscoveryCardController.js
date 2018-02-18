@@ -24,6 +24,8 @@
         
         action.setCallback(component, function(response) {
             var resp = JSON.parse(response.getReturnValue());
+            var globalId = component.getGlobalId();
+            
             if (resp.status === 'ERROR') {
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
@@ -37,13 +39,13 @@
                 $('.slds-card__header slds-grid').hide();
                 
                 var outcome = myUtil.round(resp.data.outcomeField, 1);
-                var ranges = component.get('v.outcomeColor').trim().split(',');
+                var ranges = component.get('v.outcomeColor').trim().split('|');
                 var pass = 1;
                 var color = 'score-grey';
                 for (var i=0; i<ranges.length; i++)
                 {
                   console.log('range='+ranges[i]);
-                  var tmpStr = ranges[i].split('-');
+                  var tmpStr = ranges[i].split(',');
                   var lower = parseInt(tmpStr[0].trim());
                   var upper = parseInt(tmpStr[1].trim());
                   
@@ -67,19 +69,22 @@
                   pass++;
                 }
                 
-                $('#score').html('<div class="' + color + '">' + outcome + '</div>');
+                //$('#score').html('<div class="' + color + '">' + outcome + '</div>');
+                document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + outcome + '</div>';
                 
                 if (resp.data.section1Field != undefined)
                 {
                   var fieldData = resp.data.section1Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  $('#section1').html(myUtil.populateTable(fieldData));
+                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData);
+                  //$('#section1').html(myUtil.populateTable(fieldData));
                   //$('#section1').html(myUtil.populateTable(resp.data.section1Field));
                 }
                 
                 if (resp.data.section2Field != undefined)
                 {
                   var fieldData = resp.data.section2Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  $('#section2').html(myUtil.populateTable(fieldData));
+                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData);
+                  //$('#section2').html(myUtil.populateTable(fieldData));
                   //$('#section2').html(myUtil.populateTable(resp.data.section2Field));
                 }
 
