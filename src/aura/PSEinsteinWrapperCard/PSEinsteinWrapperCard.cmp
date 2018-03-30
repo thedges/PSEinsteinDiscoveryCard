@@ -1,15 +1,21 @@
 <aura:component extensible="true" abstract="true">
+    <aura:attribute name="headerBackgroundImage" type="String" default="/resource/PSEinsteinImages/einstein_header_background.svg"></aura:attribute>
+    <aura:attribute name="headerBackgroundColor" type="String" default=""></aura:attribute>
+    <aura:attribute name="headerLogoIcon" type="String" default="/resource/PSEinsteinImages/einstein_header_icon.svg"></aura:attribute>
     <aura:attribute name="cardLabel" type="String" default="Card Title"></aura:attribute>
+    <aura:attribute name="cardLabelColor" type="String" default="#15325A"></aura:attribute>
     <aura:attribute name="hasData" type="Boolean" default="true"></aura:attribute>
     
     <div class="slds-card insightsContainer runtime_sales_insightsInsightsContainer SFX_HOME">
         <div class="slds-card__header slds-grid">
             <h2 class="einstein-logo-hdr slds-text-heading_small">
                 <span class="einstein-logo">
-                    <div class="einstein-header-wrapper runtime_sales_insightsEinsteinHeader">
-                        <span class="einstein-label">{!v.cardLabel}</span>
+                    <div class="einstein-header-wrapper runtime_sales_insightsEinsteinHeader" 
+                         style="{!v.headerBackgroundColor == '' ? 'background-image: url(' + v.headerBackgroundImage + ');' : 'background-color:' + 
+                                  v.headerBackgroundColor + ';'}">
+                        <span class="einstein-label" style="{!'color:' + v.cardLabelColor}">{!v.cardLabel}</span>
                         <span class="uiImage">
-                            <img class="einstein-header-icon" src="/resource/PSEinsteinImages/einstein_header_icon.svg"></img>
+                            <img class="einstein-header-icon" src="{!v.headerLogoIcon}" ></img>
                         </span>
                     </div>
                 </span>

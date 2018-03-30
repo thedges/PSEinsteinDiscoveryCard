@@ -1,12 +1,20 @@
 <design:component >
   <design:attribute name="cardLabel" label="Card title" Description="Label at top of card"/>
+  <design:attribute name="cardLabelColor" label="Card title color" Description="Color of label at top of card"/>
+  <design:attribute name="headerLogoIcon" label="Header logo" Description="Icon to show on right-side of header section"/> 
+  <design:attribute name="headerBackgroundImage" label="Header background image" Description="Background image for header section" />
+  <design:attribute name="headerBackgroundColor" label="Header background color" Description="Background color for header section (this will override background image)"/>
   <design:attribute name="outcomeLabel" label="Label for outcome score" Description="Label for outcome score"/> 
+  <design:attribute name="outcomeUnit" label="Unit of outcome score" Description="Unit of outcome score"/>
+  <design:attribute name="outcomeUnitSpace" label="Space before Unit" Description="Add space before unit"/>
   <design:attribute name="outcomeField" label="API field name for outcome score" Description="API field name for outcome score"/> 
   <design:attribute name="outcomeColor" label="Color range definition for red,yellow,green" Description="Color range definition for red,yellow,green"/> 
   <design:attribute name="section1Label" label="Label for section 1" Description="Label for section 1"/> 
   <design:attribute name="section1EmptyMsg" label="Empty msg for section 1" Description="Empty msg for section 1"/> 
   <design:attribute name="section1Field" label="API field name for section 1" Description="API field name for section 1"/> 
+  <design:attribute name="section1Color" label="Section 1 color range definition for red,yellow,green" Description="Color range definition for red,yellow,green"/> 
   <design:attribute name="section2Label" label="Label for section 2" Description="Label for section 2"/> 
   <design:attribute name="section2EmptyMsg" label="Empty msg for section 2" Description="Empty msg for section 2"/> 
   <design:attribute name="section2Field" label="API field name for section 2" Description="API field name for section 2"/> 
+  <design:attribute name="section2Color" label="Section 2 color range definition for red,yellow,green" Description="Color range definition for red,yellow,green"/> 
 </design:component>

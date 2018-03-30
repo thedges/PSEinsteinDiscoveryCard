@@ -39,8 +39,13 @@
                 $('.slds-card__header slds-grid').hide();
                 
                 var outcome = myUtil.round(resp.data.outcomeField, 1);
-                var ranges = component.get('v.outcomeColor').trim().split('|');
+                var unit = component.get('v.outcomeUnit');
+                var outcomeColor = component.get('v.outcomeColor').trim().split('|');
+                var section1Color = component.get('v.section1Color').trim().split('|');
+                var section2Color = component.get('v.section2Color').trim().split('|');
                 var pass = 1;
+                var color = myUtil.getColor(outcome,outcomeColor);
+                /*
                 var color = 'score-grey';
                 for (var i=0; i<ranges.length; i++)
                 {
@@ -68,24 +73,35 @@
                   }
                   pass++;
                 }
+                */
                 
                 //$('#score').html('<div class="' + color + '">' + outcome + '</div>');
-                document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + outcome + '</div>';
+                var globalIdSel = '#' + globalId;
+                console.log('globalIdSel=' + globalIdSel);
+                console.log('element=' + document.getElementById(globalId + '_score').innerHtml);
+                console.log('jquery=' + $('#' + globalId + '_score'));
+                document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + outcome + (component.get('v.outcomeUnitSpace') ? ' ': '') + (unit == null ? '' : unit) + '</div>';
                 
                 if (resp.data.section1Field != undefined)
                 {
                   var fieldData = resp.data.section1Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData);
+                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData,{ ranges: section1Color, unit: unit, space: component.get('v.outcomeUnitSpace') });
                   //$('#section1').html(myUtil.populateTable(fieldData));
                   //$('#section1').html(myUtil.populateTable(resp.data.section1Field));
+                }
+                else {
+                  document.getElementById(globalId + '_section1').innerHTML = component.get("v.section1EmptyMsg");
                 }
                 
                 if (resp.data.section2Field != undefined)
                 {
                   var fieldData = resp.data.section2Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData);
+                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData,{ ranges: section2Color, unit: unit, space: component.get('v.outcomeUnitSpace') });
                   //$('#section2').html(myUtil.populateTable(fieldData));
                   //$('#section2').html(myUtil.populateTable(resp.data.section2Field));
+                }
+                else {
+                  document.getElementById(globalId + '_section1').innerHTML = component.get("v.section2EmptyMsg");
                 }
 
             }

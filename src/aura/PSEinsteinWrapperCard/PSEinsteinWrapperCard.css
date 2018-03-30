@@ -13,7 +13,7 @@
 }
 
 .THIS .runtime_sales_insightsEinsteinHeader.einstein-header-wrapper {
-    background-image: url(/resource/PSEinsteinImages/einstein_header_background.svg);
+    background-imageX: url(/resource/PSEinsteinImages/einstein_header_background.svg);
     background-repeat: repeat-x;
     background-size: auto 81px;
     border-radius: .25rem .25rem 0 0;
@@ -36,7 +36,7 @@
     background: transparent;
     font-weight: 700;
     font-size: 1rem;
-    color: rgb(22, 50, 92);
+    colorX: rgb(22, 50, 92);
 }
 
 .THIS .runtime_sales_insightsEinsteinHeader .uiImage {

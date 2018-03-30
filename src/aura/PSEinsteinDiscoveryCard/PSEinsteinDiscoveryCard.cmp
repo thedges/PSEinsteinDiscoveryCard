@@ -1,14 +1,18 @@
 <aura:component extends="c:PSEinsteinWrapperCard" controller="PSEinsteinDiscoveryCardController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
     <ltng:require scripts="/resource/PSJquery172JS, /resource/PSEinsteinDiscoveryCardJS" afterScriptsLoaded="{!c.doInit}"	/>
     <aura:attribute name="outcomeLabel" type="String" default="Outcome Label"/>
+    <aura:attribute name="outcomeUnit" type="String" default=""/>
+    <aura:attribute name="outcomeUnitSpace" type="Boolean" default="false"/>
     <aura:attribute name="outcomeField" type="String" default="Discovery_Outcome__c"/>
     <aura:attribute name="outcomeColor" type="String" default="0,25|25,75|75,100"/>
     <aura:attribute name="section1Label" type="String" default="Leading Causes"/>
     <aura:attribute name="section1EmptyMsg" type="String" default="No causes detected"/>
     <aura:attribute name="section1Field" type="String" default="Discovery_Explanation__c"/>
+    <aura:attribute name="section1Color" type="String" default="-100,0|0,0|0,100"/>
     <aura:attribute name="section2Label" type="String" default="How to Improve This"/>
     <aura:attribute name="section2EmptyMsg" type="String" default="No recommendations detected"/>
     <aura:attribute name="section2Field" type="String" default="Discovery_Prescription__c"/>
+    <aura:attribute name="section2Color" type="String" default="-100,0|0,0|0,100"/>
     
     <aura:handler event="force:refreshView" action="{!c.doInit}" />
     
