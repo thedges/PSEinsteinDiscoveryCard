@@ -25,14 +25,14 @@ Make sure to have a space between the '+' or '-' sign and the number.
 
 Latest version has configuration options (Card title color, Header logo, Header background image, Header background color) to configure the colors to your needs. Here is sample card:
 
-![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/CardCustom.png "Sample Image")
+<img src="https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/CardCustom.gif" height="271" width="273">
 
 ### This component has the following configuration properties:
 
 * <b>Card title</b> - the title string of the card to be displayed at top
 * <b>Card title color</b> - the text color for the title of the card to be displayed at top
-* <b>Header logo</b> - the icon to show on right-side of header section (default is Einstein logo)
-* <b>Header background image</b> - the background image of the header section
+* <b>Header logo</b> - the icon to show on right-side of header section; this should be relative URL to a static resource file; default is Einstein logo at "/resource/PSEinsteinImages/einstein_header_icon.svg"
+* <b>Header background image</b> - the background image of the header section; this should be relative URL to a static resource file; default is cloud image at "/resource/PSEinsteinImages/einstein_header_background.svg"
 * <b>Header background color</b> - the background color of the header section (this will override the background image)
 * <b>Label for outcome score</b> - the label string to display at right of outcome score
 * <b>Unit of measure of outcome score</b> - the unit of measure for the outcome score
