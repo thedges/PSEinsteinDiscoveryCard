@@ -31,7 +31,7 @@ Latest version has configuration options (Card title color, Header logo, Header 
 
 * <b>Card title</b> - the title string of the card to be displayed at top
 * <b>Card title color</b> - the text color for the title of the card to be displayed at top
-* <b>Header logo</b> - the icon to show on right-side of header section; this should be relative URL to a static resource file; default is Einstein logo at "/resource/PSEinsteinImages/einstein_header_icon.svg"
+* <b>Header logo</b> - the icon to show on right-side of header section; this should be relative URL to a static resource file; default is Einstein logo at "/resource/PSEinsteinImages/einstein_header_icon.svg"; if you use custom logo icon, suggest to adjust height to about 110px 
 * <b>Header background image</b> - the background image of the header section; this should be relative URL to a static resource file; default is cloud image at "/resource/PSEinsteinImages/einstein_header_background.svg"
 * <b>Header background color</b> - the background color of the header section (this will override the background image)
 * <b>Label for outcome score</b> - the label string to display at right of outcome score
