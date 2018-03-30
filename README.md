@@ -25,7 +25,7 @@ Make sure to have a space between the '+' or '-' sign and the number.
 
 Latest version has configuration options (Card title color, Header logo, Header background image, Header background color) to configure the colors to your needs. Here is sample card:
 
-![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/CardCustom.png "Sample Image")
+![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/CardCustom.gif "Sample Image")
 
 ### This component has the following configuration properties:
 
