@@ -21,6 +21,12 @@ If you are going to hand enter some dummy text values in the explanation or pres
 
 Make sure to have a space between the '+' or '-' sign and the number.
 
+### Custom color and logo
+
+Latest version has configuration options (Card title color, Header logo, Header background image, Header background color) to configure the colors to your needs. Here is sample card:
+
+![alt text](https://raw.githubusercontent.com/thedges/PSEinsteinDiscoveryCard/master/CardCustom.png "Sample Image")
+
 ### This component has the following configuration properties:
 
 * <b>Card title</b> - the title string of the card to be displayed at top
