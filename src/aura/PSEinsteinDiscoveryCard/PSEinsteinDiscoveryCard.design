@@ -6,6 +6,7 @@
   <design:attribute name="headerBackgroundColor" label="Header background color" Description="Background color for header section (this will override background image)"/>
   <design:attribute name="outcomeLabel" label="Label for outcome score" Description="Label for outcome score"/> 
   <design:attribute name="outcomeUnit" label="Unit of outcome score" Description="Unit of outcome score"/>
+  <design:attribute name="outcomeUnitBefore" label="Unit before Outcome (ex: $)" Description="Place the unit before outcome value (ex: $)"/>
   <design:attribute name="outcomeUnitSpace" label="Space before Unit" Description="Add space before unit"/>
   <design:attribute name="outcomeField" label="API field name for outcome score" Description="API field name for outcome score"/> 
   <design:attribute name="outcomeColor" label="Color range definition for red,yellow,green" Description="Color range definition for red,yellow,green"/> 

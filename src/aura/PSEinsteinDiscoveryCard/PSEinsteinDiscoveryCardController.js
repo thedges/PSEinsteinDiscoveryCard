@@ -80,7 +80,15 @@
                 console.log('globalIdSel=' + globalIdSel);
                 console.log('element=' + document.getElementById(globalId + '_score').innerHtml);
                 console.log('jquery=' + $('#' + globalId + '_score'));
-                document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + outcome + (component.get('v.outcomeUnitSpace') ? ' ': '') + (unit == null ? '' : unit) + '</div>';
+                
+                if (component.get('v.outcomeUnitBefore'))
+                {
+                  document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + (unit == null ? '' : unit) + (component.get('v.outcomeUnitSpace') ? ' ': '') + outcome + '</div>';
+                }
+                else
+                {
+                  document.getElementById(globalId + '_score').innerHTML = '<div class="' + color + '">' + outcome + (component.get('v.outcomeUnitSpace') ? ' ': '') + (unit == null ? '' : unit) + '</div>';
+                }
                 
                 if (resp.data.section1Field != undefined)
                 {

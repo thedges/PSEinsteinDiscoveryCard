@@ -2,6 +2,7 @@
     <ltng:require scripts="/resource/PSJquery172JS, /resource/PSEinsteinDiscoveryCardJS" afterScriptsLoaded="{!c.doInit}"	/>
     <aura:attribute name="outcomeLabel" type="String" default="Outcome Label"/>
     <aura:attribute name="outcomeUnit" type="String" default=""/>
+    <aura:attribute name="outcomeUnitBefore" type="Boolean" default="false"/>
     <aura:attribute name="outcomeUnitSpace" type="Boolean" default="false"/>
     <aura:attribute name="outcomeField" type="String" default="Discovery_Outcome__c"/>
     <aura:attribute name="outcomeColor" type="String" default="0,25|25,75|75,100"/>
