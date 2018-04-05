@@ -50,6 +50,7 @@ Latest version has configuration options (Card title color, Header logo, Header 
 * <b>Label for outcome score</b> - the label string to display at right of outcome score
 * <b>Unit of measure of outcome score</b> - the unit of measure for the outcome score
 * <b>Space before unit of measure</b> - boolean flag to put a space before the unit of measure
+* <b>Place unit before outcome value</b> - boolean flag to place unit before outcome value (ex: for $ values)
 * <b>API field name for outcome score</b> - the API field name of the object field to pull the outcome score
 * <b>Color range definition for red,yellow,green</b> - a range of values to determine the color of the outcome score. The string is in format like "-100,0|0,0|0,100" where first range defines red, second yellow and third green.
 * <b>Label for section 1</b> - the label to show at top of the first section of Einstein Discovery results
