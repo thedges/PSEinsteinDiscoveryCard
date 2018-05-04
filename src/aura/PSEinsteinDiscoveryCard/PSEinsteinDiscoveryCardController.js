@@ -93,7 +93,7 @@
                 if (resp.data.section1Field != undefined)
                 {
                   var fieldData = resp.data.section1Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData,{ ranges: section1Color, unit: unit, space: component.get('v.outcomeUnitSpace') });
+                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData,{ ranges: section1Color, unit: '', space: component.get('v.outcomeUnitSpace') });
                   //$('#section1').html(myUtil.populateTable(fieldData));
                   //$('#section1').html(myUtil.populateTable(resp.data.section1Field));
                 }
@@ -104,7 +104,7 @@
                 if (resp.data.section2Field != undefined)
                 {
                   var fieldData = resp.data.section2Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData,{ ranges: section2Color, unit: unit, space: component.get('v.outcomeUnitSpace') });
+                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData,{ ranges: section2Color, unit: '', space: component.get('v.outcomeUnitSpace') });
                   //$('#section2').html(myUtil.populateTable(fieldData));
                   //$('#section2').html(myUtil.populateTable(resp.data.section2Field));
                 }
