@@ -11,7 +11,7 @@
             <h2 class="einstein-logo-hdr slds-text-heading_small">
                 <span class="einstein-logo">
                     <div class="einstein-header-wrapper runtime_sales_insightsEinsteinHeader" 
-                         style="{!v.headerBackgroundColor == '' ? 'background-image: url(' + v.headerBackgroundImage + ');' : 'background-color:' + 
+                         style="{!(v.headerBackgroundColor == '' || v.headerBackgroundColor == null) ? 'background-image: url(' + v.headerBackgroundImage + ');' : 'background-color:' + 
                                   v.headerBackgroundColor + ';'}">
                         <span class="einstein-label" style="{!'color:' + v.cardLabelColor}">{!v.cardLabel}</span>
                         <span class="uiImage">
