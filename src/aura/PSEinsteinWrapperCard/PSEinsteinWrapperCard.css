@@ -15,7 +15,7 @@
 .THIS .runtime_sales_insightsEinsteinHeader.einstein-header-wrapper {
     background-imageX: url(/resource/PSEinsteinImages/einstein_header_background.svg);
     background-repeat: repeat-x;
-    background-size: auto 81px;
+    background-sizeX: auto 81px;
     border-radius: .25rem .25rem 0 0;
     border-color: rgb(221, 219, 218);
     height: 81px;
