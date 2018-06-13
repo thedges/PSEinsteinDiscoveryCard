@@ -1,5 +1,5 @@
 <aura:component extends="c:PSEinsteinWrapperCard" controller="PSEinsteinDiscoveryCardController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
-    <ltng:require scripts="/resource/PSJquery172JS, /resource/PSEinsteinDiscoveryCardJS" afterScriptsLoaded="{!c.doInit}"	/>
+    <ltng:require scripts="/resource/PSJquery172JS" afterScriptsLoaded="{!c.doInit}"	/>
     <aura:attribute name="outcomeLabel" type="String" default="Outcome Label"/>
     <aura:attribute name="outcomeUnit" type="String" default=""/>
     <aura:attribute name="outcomeUnitBefore" type="Boolean" default="false"/>
@@ -21,7 +21,7 @@
         
         <div class="slds-size--1-of-1 slds-grid slds-nowrap slds-grid--vertical-align-end slds-p-top--small" style="background-color: rgb(255, 255, 255); ">
             <div id='score_container' class="slds-list--horizontal slds-wrap slds-m-horizontal--large" style="margin-bottom:5px">                    
-                <div id="{!globalId + '_score'}" class='slds-item--label ac-sdd-left-col slds-text-heading--large slds-text-color--weak slds-p-left--xx-large font-weight-bold' style="margin-left: -36px; !important; width:36% !important; font-size:1.75rem !important; margin-right:2px"/>
+                <div id="{!globalId + '_score'}" class='slds-item--label ac-sdd-left-col slds-text-heading--large slds-text-color--weak slds-p-left--xx-large font-weight-bold' style="margin-left: -36px; !important; width:36% !important; font-size:1.50rem !important; margin-right:2px"/>
                 <div id='score_label' class='slds-item--detail ac-sdd-right-col slds-text-title--caps slds-text-color--weak slds-p-left--small slds-p-top--medium' style="width: 50%!important; margin-top: 10px !important; white-space: nowrap !important;">
                     {!v.outcomeLabel}
                 </div> 

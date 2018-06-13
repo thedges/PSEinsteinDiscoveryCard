@@ -38,13 +38,13 @@
             } else {
                 $('.slds-card__header slds-grid').hide();
                 
-                var outcome = myUtil.round(resp.data.outcomeField, 1);
+                var outcome = helper.round(resp.data.outcomeField, 1);
                 var unit = component.get('v.outcomeUnit');
                 var outcomeColor = component.get('v.outcomeColor').trim().split('|');
                 var section1Color = component.get('v.section1Color').trim().split('|');
                 var section2Color = component.get('v.section2Color').trim().split('|');
                 var pass = 1;
-                var color = myUtil.getColor(outcome,outcomeColor);
+                var color = helper.getColor(outcome, outcomeColor);
                 /*
                 var color = 'score-grey';
                 for (var i=0; i<ranges.length; i++)
@@ -93,7 +93,7 @@
                 if (resp.data.section1Field != undefined)
                 {
                   var fieldData = resp.data.section1Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section1').innerHTML = myUtil.populateTable(fieldData,{ ranges: section1Color, unit: '', space: component.get('v.outcomeUnitSpace') });
+                  document.getElementById(globalId + '_section1').innerHTML = helper.populateTable(fieldData,{ ranges: section1Color, unit: '', space: component.get('v.outcomeUnitSpace') });
                   //$('#section1').html(myUtil.populateTable(fieldData));
                   //$('#section1').html(myUtil.populateTable(resp.data.section1Field));
                 }
@@ -104,7 +104,7 @@
                 if (resp.data.section2Field != undefined)
                 {
                   var fieldData = resp.data.section2Field.replace(/<p>/gi, "").replace(/<\/p>/gi, '<br>');
-                  document.getElementById(globalId + '_section2').innerHTML = myUtil.populateTable(fieldData,{ ranges: section2Color, unit: '', space: component.get('v.outcomeUnitSpace') });
+                  document.getElementById(globalId + '_section2').innerHTML = helper.populateTable(fieldData,{ ranges: section2Color, unit: '', space: component.get('v.outcomeUnitSpace') });
                   //$('#section2').html(myUtil.populateTable(fieldData));
                   //$('#section2').html(myUtil.populateTable(resp.data.section2Field));
                 }

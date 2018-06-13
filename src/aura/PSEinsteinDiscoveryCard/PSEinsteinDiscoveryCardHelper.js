@@ -1,44 +1,19 @@
-(function(w){
-  
-    var utilMethods = {
-        "populateTable":populateTable,
-        "round":round,
-        "getColor":getColor
-    };
-    
-    function round(value, precision) {
+({
+    round : function(value, precision) {
         var multiplier = Math.pow(10, precision || 0);
         var outputHTML = "";
-
+        
         console.log('value1: ' + value);
         console.log("#####" + Math.round(value * multiplier) / multiplier);
         multiplier = Math.round(value * multiplier) / multiplier;
         return multiplier;
-        /*
-        if (multiplier <= 25)
-        {
-           outputHTML = '<div class="score-green">' + multiplier + '</div>';
-        }
-        else if (multiplier > 25 && multiplier <=75)
-        {
-          outputHTML = '<div class="score-yellow">' + multiplier + '</div>';
-        }
-        else if (multiplier > 76)
-        {
-          outputHTML = '<div class="score-red">' + multiplier + '</div>';
-        }
-        else
-        {
-          outputHTML = '<div class="score-grey">' + multiplier + '</div>';
-        }
-        console.log('outputHTML=' + outputHTML);
-        return outputHTML;
-        */
-    }
+    },
     
-    function getColor(value,ranges) {
+    getColor : function(value, ranges) {
+        
         var pass = 1;
         var color = 'score-grey';
+        
         for (var i=0; i<ranges.length; i++)
         {
             console.log('value='+value+'range='+ranges[i]);
@@ -67,11 +42,10 @@
         }
         
         return color;
-    }
-    
-    function populateTable(input,params) {
+    },
+    populateTable : function(input, params) {
         console.log('initial input: ', input);
-   		if (!input || input.length == 0) {
+        if (!input || input.length == 0) {
             console.log('input is undefined');
             input = 'No recommendations detected'
         }
@@ -99,21 +73,21 @@
                 scoreStr = cleanStr.substr(0,1) + ' ' + cleanStr.substr(cleanStr.lastIndexOf(' '));
                 scoreNum = parseFloat(scoreStr);
                 desc = cleanStr.substr(1,cleanStr.lastIndexOf(' '));
-                color = getColor(scoreNum,params.ranges);
+                color = this.getColor(scoreNum,params.ranges);
             }
             else if(cleanStr.startsWith('From The Baseline') > 0){
                 scoreStr = cleanStr.split(',')[1].replace('+','+ ').replace('-','- ').replace(' + ','+ ').replace(' - ','- ');
                 scoreNum = parseFloat(scoreStr.replace('+ ','').replace('- ','-'));
                 console.log('baseline score: ' + scoreStr);
                 desc = cleanStr.split(',')[0]
-                color = getColor(scoreNum,params.ranges);
+                color = this.getColor(scoreNum,params.ranges);
             }
-            else {
-                scoreStr = cleanStr.substr(0, cleanStr.indexOf(' ')).replace('+','+ ').replace('-','- ');
-                scoreNum = parseFloat(scoreStr.replace('+ ','').replace('- ','-'));
-                desc = cleanStr.substr(cleanStr.indexOf(' ') + 1).replace('Because','').replace('If You Change','Change');
-                color = getColor(scoreNum,params.ranges);
-            }
+                else {
+                    scoreStr = cleanStr.substr(0, cleanStr.indexOf(' ')).replace('+','+ ').replace('-','- ');
+                    scoreNum = parseFloat(scoreStr.replace('+ ','').replace('- ','-'));
+                    desc = cleanStr.substr(cleanStr.indexOf(' ') + 1).replace('Because','').replace('If You Change','Change');
+                    color = this.getColor(scoreNum,params.ranges);
+                }
             console.log('score: ' + scoreStr);
             
             /*if(score.startsWith('-')){
@@ -121,14 +95,13 @@
             }*/
             
             if(scoreStr.startsWith('N')){
-                outputHTML += '<div class="slds-truncate slds-text-body--regular slds-m-vertical--xx-small slds-text-color--weak" title="'  + desc + '">' + scoreStr + (params.space ? ' ' : '') + params.unit + ' ' + desc + '</div>'
+                outputHTML += '<div class="slds-truncate slds-text-body--regular slds-m-vertical--xx-small slds-text-color--weak">' + scoreStr + (params.space ? ' ' : '') + params.unit + ' ' + desc + '</div>'
             } else{
-            	outputHTML += '<div class="slds-item--label ac-sdd-left-col slds-truncate slds-text-body--regular slds-m-vertical--xx-small ' + color + '">' + scoreStr + (params.space ? ' ' : '') + params.unit + '</div>';
-				outputHTML += '<div class="slds-item--detail ac-sdd-right-col slds-truncate slds-text-body--regular slds-m-vertical--xx-small slds-text-color--weak" title="' + desc + '">' + desc + '</div>'
+                outputHTML += '<div class="slds-item--label ac-sdd-left-col slds-truncate slds-text-body--regular slds-m-vertical--xx-small ' 
+                              + color + '">' + scoreStr + (params.space ? ' ' : '') + params.unit + '</div>';
+                outputHTML += '<div class="slds-item--detail ac-sdd-right-col slds-truncate slds-text-body--regular slds-m-vertical--xx-small slds-text-color--weak">' + desc + '</div>'
             }
         }
         return outputHTML;
-	}
-
-	w.myUtil = utilMethods;
-})(window);
+    }
+ })
