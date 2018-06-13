@@ -10,19 +10,6 @@ The following is example screenshot of the component showing the Einstein Discov
 
 * Setup the Einstein Discovery writeback as defined [here](https://help.salesforce.com/articleView?id=bi_edd_wb_intro.htm&type=0)
 
-### WARNING: Potential issue when updating component
-
-Some of the logic for this component is stored in a static resource file. Due to the caching nature of static resources, this can cause issue when you update to latest component. If you see issue with component, try the following to make sure you are pointed to the latest version of the "PSEinsteinDiscoveryCardJS" static resource file:
-
-1. Go to Setup > Custom Code > Static Resources
-2. Find the "PSEinsteinDiscoveryCardJS" static resource file and select it.
-3. Click on the "View file" link. In the browser URL, copy down the URL portion like the following (the middle number is what we are interested in): example: /resource/1522766064000/PSEinsteinDiscoveryCardJS
-4. Open up Developer Console
-5. Select File > Open Lightning Resource. Select c:PSEinsteinDiscoveryCard
-6. On right-hand side of Developer console, select the COMPONENT option to edit the PSEinsteinDiscoveryCard.cmp file.
-7. On second line of code, there should be entry like "/resource/PSEinsteinDiscoveryCardJS". Change that to the value you copied down in step 3 above. (example: "/resource/1522766064000/PSEinsteinDiscoveryCardJS")
-8. Save the PSEinsteinDiscoveryCard.cmp and reload your page that you are using the component on.
-
 ### Hand-coding fake Einstein Discovery results
 
 If you are going to hand enter some dummy text values in the explanation or prescription fields, please follow this format in the rich text editor. Create entry like following on separate line 
