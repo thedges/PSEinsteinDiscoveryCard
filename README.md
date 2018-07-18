@@ -8,7 +8,7 @@ The following is example screenshot of the component showing the Einstein Discov
 
 ### Pre-requisite
 
-* Setup the Einstein Discovery writeback as defined [here](https://help.salesforce.com/articleView?id=bi_edd_wb_intro.htm&type=0)
+* Setup the Einstein Discovery writeback as defined [here](https://help.salesforce.com/articleView?id=bi_edd_wb_native.htm&type=5)
 
 ### Hand-coding fake Einstein Discovery results
 
