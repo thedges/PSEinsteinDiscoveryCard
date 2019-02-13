@@ -1,5 +1,6 @@
 <aura:component extends="c:PSEinsteinWrapperCard" controller="PSEinsteinDiscoveryCardController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
     <ltng:require scripts="/resource/PSJquery172JS" afterScriptsLoaded="{!c.doInit}"	/>
+    
     <aura:attribute name="outcomeLabel" type="String" default="Outcome Label"/>
     <aura:attribute name="outcomeUnit" type="String" default=""/>
     <aura:attribute name="outcomeUnitBefore" type="Boolean" default="false"/>
@@ -10,10 +11,12 @@
     <aura:attribute name="section1EmptyMsg" type="String" default="No causes detected"/>
     <aura:attribute name="section1Field" type="String" default="Discovery_Explanation__c"/>
     <aura:attribute name="section1Color" type="String" default="-100,0|0,0|0,100"/>
+    <aura:attribute name="section1Limit" type="Integer" />
     <aura:attribute name="section2Label" type="String" default="How to Improve This"/>
     <aura:attribute name="section2EmptyMsg" type="String" default="No recommendations detected"/>
     <aura:attribute name="section2Field" type="String" default="Discovery_Prescription__c"/>
     <aura:attribute name="section2Color" type="String" default="-100,0|0,0|0,100"/>
+    <aura:attribute name="section2Limit" type="Integer" />
     
     <aura:handler event="force:refreshView" action="{!c.doInit}" />
     

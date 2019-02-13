@@ -55,7 +55,15 @@
         
         var outputHTML = "";
         
+        var limit = params.limit;
+        if (limit != null && limit <= 0)
+        {
+            limit = null;
+        }
+        
         for (var i = 0; i < inputArr.length; ++i) {
+            
+            if (limit != null && i >= limit) break;
             
             var scoreStr;
             var scoreNum;
