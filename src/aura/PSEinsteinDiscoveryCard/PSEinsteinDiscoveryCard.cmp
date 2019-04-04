@@ -1,4 +1,4 @@
-<aura:component extends="c:PSEinsteinWrapperCard" controller="PSEinsteinDiscoveryCardController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+<aura:component extends="c:PSEinsteinWrapperCard" controller="PSEinsteinDiscoveryCardController" implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
     <ltng:require scripts="/resource/PSJquery172JS" afterScriptsLoaded="{!c.doInit}"	/>
     
     <aura:attribute name="outcomeLabel" type="String" default="Outcome Label"/>
