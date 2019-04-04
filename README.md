@@ -1,4 +1,5 @@
 # PSEinsteinDiscoveryCard
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
 
 This component is an enhancement some examples found in an SDO for showing Einstein Discovery results in a component on page. The original components found were "hard coded" to the object that stored the Einstein Discovery results. This component is fully generic and can be placed on any object and all parameters are configurable.
 
